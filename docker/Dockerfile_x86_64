@@ -1,0 +1,15 @@
+FROM ubuntu:22.04
+
+LABEL Description="Build environment x86_64"
+
+RUN apt-get update \
+    && apt-get install build-essential -y \
+    && apt-get install cmake -y
+
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+
+#COPY ./build_x86_64 /app/utils/build_x86_64
+
+ENTRYPOINT [ "/bin/bash", "-l", "-c" ]
+
+
