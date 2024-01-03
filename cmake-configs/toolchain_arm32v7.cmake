@@ -1,0 +1,17 @@
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+
+set(CMAKE_AR            /usr/bin/arm-linux-gnueabi-ar     )
+set(CMAKE_ASM_COMPILER  /usr/bin/arm-linux-gnueabi-as     )
+set(CMAKE_C_COMPILER    /usr/bin/arm-linux-gnueabi-gcc    )
+set(CMAKE_CXX_COMPILER  /usr/bin/arm-linux-gnueabi-g++    )
+set(CMAKE_LINKER        /usr/bin/arm-linux-gnueabi-ld     )
+set(CMAKE_OBJCOPY       /usr/bin/arm-linux-gnueabi-objcopy)
+set(CMAKE_RANLIB        /usr/bin/arm-linux-gnueabi-ranlib )
+set(CMAKE_SIZE          /usr/bin/arm-linux-gnueabi-size   )
+set(CMAKE_STRIP         /usr/bin/arm-linux-gnueabi-strip  )
+
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
