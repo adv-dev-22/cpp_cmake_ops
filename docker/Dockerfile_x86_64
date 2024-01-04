@@ -8,8 +8,6 @@ RUN apt-get update \
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
-#COPY ./build_x86_64 /app/utils/build_x86_64
-
 ENTRYPOINT [ "/bin/bash", "-l", "-c" ]
 
 
