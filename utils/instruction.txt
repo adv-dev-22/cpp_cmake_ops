@@ -186,3 +186,31 @@ H H * * *
 
 
 5. Сохранение и восстановление проекта через Jenkins CLI.
+
+5.1 Скачиваем jenkins-cli.jar на VM-1
+wget http://158.160.105.42:8080/jnlpJars/jenkins-cli.jar
+Проверяем, что работает
+java -jar jenkins-cli.jar -s http://158.160.98.11:8080/ help
+
+5.2 Создаем отдельного пользователя для работы в CLI
+5.2.1 Проверяем аутентификацию
+java -jar jenkins-cli.jar -auth cli_service_01:password -s http://158.160.105.42:8080/ who-am-i
+5.2.2 Cоздаем для него токен (через web-интерфейс в Jenkins)
+token-cli 11935ce3172c35e0067a5a52539b9c2217
+
+5.3. Создаем две переменных окружения
+5.3.1 export JENKINS_USER_ID=cli_service_01
+5.3.2 export JENKINS_API_TOKEN=11935ce3172c35e0067a5a52539b9c2217
+Проверяем
+java -jar jenkins-cli.jar -s http://158.160.105.42:8080/ who-am-i
+
+5.4 Этой командой можно пользоваться с удаленного компьютера, главное,
+    скачать jenkins-cli.jar (можно через web interface)
+    прописать две переменных окружения, п.5.3
+
+5.5 Сохраняем проект
+java -jar jenkins-cli.jar -s http://158.160.105.42:8080/ get-job ubuntu-build-cmake > ubuntu-build-cmake_backup.xml
+
+5.6 Восстановить проект
+java -jar jenkins-cli.jar -s http://158.160.105.42:8080/ create-job ubuntu-build-cmake-2 < ubuntu-build-cmake_backup.xml
+
