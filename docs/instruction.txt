@@ -74,6 +74,8 @@ ubuntu_x86_84    v12       cfcc7cea2713   6 days ago     470MB
 
 2.3 Добавляем шаг сборки. Выполнить команду shell. Вставляем текст
 $SCRIPT_PATH/build_x86_64.sh
+
+В скрипте содержится код, ниже приводится его закомментированная копия:
 #echo "------------------ Build x86_64 Started ------------------"
 #SRC_PATH=$WORKSPACE
 #mkdir build-x86_64
@@ -83,6 +85,8 @@ $SCRIPT_PATH/build_x86_64.sh
 
 2.4 Добавляем шаг сборки. Выполнить команду shell. Вставляем текст
 $SCRIPT_PATH/test_x86_64.sh
+
+В скрипте содержится код, ниже приводится его закомментированная копия:
 #echo "------------------ Test x86_64 Started ------------------"
 #SRC_PATH=$WORKSPACE
 #docker run --rm --name img_run_x86_64_12 -v $SRC_PATH:/app/src ubuntu_x86_84:v12 \
@@ -92,6 +96,8 @@ $SCRIPT_PATH/test_x86_64.sh
 
 2.5 Добавляем шаг сборки. Выполнить команду shell. Вставляем текст
 $SCRIPT_PATH/build_arm32v7.sh
+
+В скрипте содержится код, ниже приводится его закомментированная копия:
 #echo "------------------ Build arm32v7 Started ------------------"
 #SRC_PATH=$WORKSPACE
 #mkdir build-arm32v7
@@ -104,6 +110,8 @@ $SCRIPT_PATH/build_arm32v7.sh
 
 2.6 Добавляем шаг сборки. Выполнить команду shell. Вставляем текст
 $SCRIPT_PATH/deploy_all.sh
+
+В скрипте содержится код, ниже приводится его закомментированная копия:
 #echo "------------------ Deploy Started ------------------"
 #SRC_PATH=$WORKSPACE
 #scp -o StrictHostKeyChecking=no $SRC_PATH/build-x86_64/libtiff/libtiff.so \
