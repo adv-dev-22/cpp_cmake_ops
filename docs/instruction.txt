@@ -166,7 +166,7 @@ mkdir build-x86_64
 3.8.6 В папке build-x86_64 создаем две папки
 mkdir libs_out
 mkdir tests_out
-3.8.7 В папке build-arm32v7 создаем папку
+3.8.7 В папке build-arm32v7 создаем папку libs_out
 При успешном запуске сборки в конце видим примерно такой вывод:
 SSH: Connecting from host [ubuntu-server-01]
 SSH: Connecting with configuration [yc-ubuntu-deploy-02] ...
